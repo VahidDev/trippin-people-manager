@@ -1,0 +1,32 @@
+<Project>
+
+  <!-- Shared settings for every project in the solution. -->
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <LangVersion>latest</LangVersion>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <InvariantGlobalization>true</InvariantGlobalization>
+  </PropertyGroup>
+
+  <!--
+    Production projects are held to a strict bar: warnings fail the build.
+    tests/Directory.Build.props relaxes this; test code legitimately does
+    things (null-forgiving operators, unused locals in arrange blocks) that
+    would otherwise be noise.
+  -->
+  <PropertyGroup>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <EnforceCodeStyleInBuild>true</EnforceCodeStyleInBuild>
+    <AnalysisLevel>latest-recommended</AnalysisLevel>
+
+    <!--
+      Required for IDE0005 (unused usings) to run as a build diagnostic at all.
+      CS1591 is suppressed with it: we document types where the reasoning is
+      non-obvious, not every public member for its own sake.
+    -->
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <NoWarn>$(NoWarn);CS1591</NoWarn>
+  </PropertyGroup>
+
+</Project>

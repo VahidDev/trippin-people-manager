@@ -1,0 +1,18 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <!--
+    Query-string building, service-quirk handling and cache behaviour.
+    RichardSzalay.MockHttp stubs HttpMessageHandler so the quirk tests
+    (204-not-404, 412, 428, nextLink paging) run with no network at all.
+  -->
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\src\TripPin.Infrastructure\TripPin.Infrastructure.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="NSubstitute" />
+    <PackageReference Include="RichardSzalay.MockHttp" />
+  </ItemGroup>
+
+</Project>

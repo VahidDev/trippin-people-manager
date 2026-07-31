@@ -1,0 +1,19 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <!--
+    Use cases and ports. Depends on Domain only.
+    Deliberately has no HTTP, no caching and no logging-sink packages:
+    those are Infrastructure concerns reached through the ports defined here.
+    Microsoft.Extensions.Hosting.Abstractions is pulled in transitively for
+    IServiceCollection registration only.
+  -->
+
+  <ItemGroup>
+    <ProjectReference Include="..\TripPin.Domain\TripPin.Domain.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Extensions.Hosting" />
+  </ItemGroup>
+
+</Project>

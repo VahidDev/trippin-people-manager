@@ -1,0 +1,9 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <!--
+    The innermost layer. Zero package references and zero project references,
+    by design and enforced by their absence. If anything ever needs adding
+    here, that is the signal that it belongs in Application or Infrastructure.
+  -->
+
+</Project>

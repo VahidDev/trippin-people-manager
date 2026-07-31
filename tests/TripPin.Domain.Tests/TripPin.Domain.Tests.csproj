@@ -1,0 +1,9 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <!-- Pure invariant tests. No mocks needed, and none referenced. -->
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\src\TripPin.Domain\TripPin.Domain.csproj" />
+  </ItemGroup>
+
+</Project>

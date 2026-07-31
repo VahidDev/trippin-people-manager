@@ -1,0 +1,14 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <!--
+    Handler behaviour against Fakes/FakePeopleRepository, a hand-written
+    recording stand-in. No mocking library: these tests assert on what the
+    handler passed down, which a recording fake states more plainly than a
+    chain of argument matchers.
+  -->
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\src\TripPin.Application\TripPin.Application.csproj" />
+  </ItemGroup>
+
+</Project>
